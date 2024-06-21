@@ -3,7 +3,9 @@ import { EspaciosService } from './espacios.service';
 import { CreateEspacioDto } from './dto/create-espacio.dto';
 import { UpdateEspacioDto } from './dto/update-espacio.dto';
 import { Espacio } from './espacio.entity';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('espacios')
 @Controller('espacios')
 export class EspaciosController {
   constructor(private readonly espaciosService: EspaciosService) {}

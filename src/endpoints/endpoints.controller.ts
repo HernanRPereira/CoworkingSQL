@@ -2,7 +2,9 @@ import { Controller, Get, Post, Body, Param, Delete, Put } from '@nestjs/common'
 import { EndpointsService } from './endpoints.service'; 
 import { Sesion } from 'src/sesiones/sesion.entity'; 
 import { Espacio } from 'src/espacios/espacio.entity'; 
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Endpoints')
 @Controller('Endpoints')
 export class EndpointsController {
   constructor(private readonly endpointsService: EndpointsService) { }
