@@ -3,7 +3,9 @@ import { SesionesService } from './sesiones.service';
 import { CreateSesionDto } from './dto/create-sesion.dto';
 import { UpdateSesionDto } from './dto/update-sesion.dto';
 import { Sesion } from './sesion.entity';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('sesiones')
 @Controller('sesiones')
 export class SesionesController {
   constructor(private readonly sesionesService: SesionesService) { }
