@@ -6,7 +6,7 @@ import { SesionesModule } from './sesiones/sesiones.module';
 import { SalasModule } from './salas/salas.module';
 import { EspaciosModule } from './espacios/espacios.module';
 import { ReservasModule } from './reservas/reservas.module';
-import { readFileSync } from 'fs';
+import { endpointsModule } from './endpoints/endpoints.module';
 
 @Module({
   imports: [
@@ -29,6 +29,7 @@ import { readFileSync } from 'fs';
     SalasModule,
     EspaciosModule,
     ReservasModule,
+    endpointsModule,
   ],
 })
 export class AppModule {}

@@ -10,7 +10,7 @@ export class SesionesService {
   constructor(
     @InjectRepository(Sesion)
     private sesionesRepository: Repository<Sesion>,
-  ) {}
+  ) { }
 
   findAll(): Promise<Sesion[]> {
     return this.sesionesRepository.find();

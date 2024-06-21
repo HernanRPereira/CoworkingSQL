@@ -6,7 +6,7 @@ import { Sesion } from './sesion.entity';
 
 @Controller('sesiones')
 export class SesionesController {
-  constructor(private readonly sesionesService: SesionesService) {}
+  constructor(private readonly sesionesService: SesionesService) { }
 
   @Get()
   findAll(): Promise<Sesion[]> {
@@ -32,4 +32,6 @@ export class SesionesController {
   remove(@Param('id') id: string): Promise<void> {
     return this.sesionesService.remove(+id);
   }
+
 }
+
